@@ -11,11 +11,9 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/profil.css" rel="stylesheet">
-    <link href="css/katalog.css" rel="stylesheet">
-
   </head>
 
-	<body onload="ganti_gambar();seni_ganti_gambar();teknik_ganti_gambar();science_ganti_gambar();novel_ganti_gambar();">
+  <body>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -50,7 +48,7 @@
               </div>
             </li>
             <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-          <li class="dropdown">
+            <li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">Notifikasi</li>
@@ -59,11 +57,12 @@
                 <li><a href="notifikasi.html">Husain mengirim pesan kepada kamu</a></li>
               </ul>
 			</li>
+	
             <li><a href="#" class="red"><span class="glyphicon glyphicon-envelope"></span> <strong>2</strong></a></li>
-            <li class="dropdown">
+             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Edmund <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="myprofile.html"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
+                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
                 <li><a href="./"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
                 <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
               </ul>
@@ -75,45 +74,41 @@
     
     <!-- Main content goes here! -->
     <div class="container main">
-		<div id="katalog">
-			<div id="header-katalog">
-				<h3 style="float:left;">Katalog</h3>
-			</div>
-			
-			&nbsp;<hr>
-			<div id="main-katalog">
-				<div id="wrapper-olahraga">
-					<div class="slideshow">
-						<a href="katalog-olahraga.html"><img src="img/katalog/olahraga/1.jpg" width="150px" height="200px" name="gambar">
-						<h3>Olahraga</h3></a>
-					</div>
-				</div>
-				<div id="wrapper-seni">
-					<div class="slideshow">
-						<img src="img/katalog/seni/1.jpg" width="150px" height="200px" name="gambarseni">
-						<h3>Seni</h3>
-					</div>				
-				</div>
-				<div id="wrapper-teknik">
-					<div class="slideshow">
-						<img src="img/katalog/teknik/1.jpg" width="150px" height="200px" name="gambarteknik">
-						<h3>Teknik</h3>
-					</div>				
-				</div>
-				<div id="wrapper-science">
-					<div class="slideshow">
-						<img src="img/katalog/science/1.jpg" width="150px" height="200px" name="gambarscience">
-						<h3>Science</h3>
-					</div>				
-				</div>
-				<div id="wrapper-novel">
-					<div class="slideshow">
-						<img src="img/katalog/novel/1.jpg" width="150px" height="200px" name="gambarnovel">
-						<h3>Novel</h3>
-					</div>
-				</div>
-			</div>
-		</div>
+       <h1>Form Penjualan Buku</h1>
+        <form role="form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Judul Buku</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Judul Buku">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Pengarang</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Pengarang">
+          </div>
+          <div class="form-inline">
+            <label for="exampleInputPassword1">Penerbit</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Penerbit">
+            <label for="exampleInputPassword1">Tahun</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Tahun">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Deskripsi Buku</label>
+            <textarea class="form-control" id="exampleInputPassword1" placeholder="Deskripsi buku"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Kondisi Buku</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Pengarang">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Harga Buku</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Pengarang">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">Gambar Buku</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">upload gambar disini</p>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
     </div>
     
     <div class="clear"></div>
@@ -162,10 +157,5 @@
     </div>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/olahraga-slideshow.js"></script>
-	<script src="js/seni-slideshow.js"></script>
-	<script src="js/teknik-slideshow.js"></script>
-	<script src="js/science-slideshow.js"></script>
-	<script src="js/novel-slideshow.js"></script>
   </body>
 </html>
