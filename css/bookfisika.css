@@ -1,0 +1,13 @@
+#judul {
+	border-bottom: 1px solid black;
+}
+
+.harga {
+	position: absolute;
+	right:0;
+	bottom: -10%;
+}
+
+#related {
+	border-bottom: 1px dashed black;
+}

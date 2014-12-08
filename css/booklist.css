@@ -1,0 +1,9 @@
+.kategori {
+	border-bottom: 1px dashed black;
+}
+
+.harga {
+	position: absolute;
+	right:0;
+	bottom: 0;
+}
