@@ -1,9 +1,17 @@
-
-	.main > h4 {
+.judul {
 		margin-top: 0;
 		padding-bottom:1%;
 		border-bottom: 1px solid black;
 	}
+
+.btn1, .btn3 {
+	border:1px solid white;
+}
+
+.btn2 {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
 
 .r2 > .col-xs-8 {
 }
@@ -131,4 +139,8 @@
 }
 .chat > .glyphicon {
 	color: green;
+}
+
+.report {
+	cursor:pointer;
 }

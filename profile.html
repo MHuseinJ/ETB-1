@@ -8,13 +8,14 @@
 
     <title>E-BukuBekas</title>
 
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/profil.css" rel="stylesheet">
   </head>
 
   <body>
-    <!-- Fixed navbar -->
+     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -24,33 +25,47 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="katalog.html">E-BukuBekas</a>
+          <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-book"></span> E-BukuBekas</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse category<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Majalah</a></li>
+                <li><a href="#">Nonfiksi</a></li>
+                <li><a href="#">Musik</a></li>
+                <li><a href="katalog-sains.html">Sains</a></li>
+                <li><a href="#">Olahraga</a></li>
+                <li><a href="#">Seni</a></li>
+                <li><a href="#">Teknik</a></li>
+                <li><a href="#">Novel</a></li>
+                <li><a href="#">Jurnal</a></li>
+                <li><a href="#">Bisnis</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Lainnya</a></li>
+                <li class="divider"></li>
+                <li><a href="katalog.html"><span class="glyphicon glyphicon-th"></span> Show All Category</a></li>
+              </ul>
+            </li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <div class="search-wrap">
-                <input type="text" class="form-control" placeholder="Search">
-                <a href="search.html"> <span class="glyphicon glyphicon-search"></span></a>
+              <div class="search-wrap ui-widget">
+				<input id="tags" class="form-control">
+                <span class="glyphicon glyphicon-search" onClick="hasilCari();"></span>
               </div>
             </li>
-            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-            <li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li class="dropdown-header">Notifikasi</li>
-                <li class="divider"></li>
-                <li><a href="notifikasi.html">Christ mengirim pesan kepada kamu</a></li>
-                <li><a href="notifikasi.html">Husain mengirim pesan kepada kamu</a></li>
-              </ul>
-			</li>
-	
+            <li><a href="shoppingcart.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
             <li><a href="#" class="red"><span class="glyphicon glyphicon-envelope"></span> <strong>2</strong></a></li>
-             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Edmund <span class="caret"></span></a>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Welcome, Edmund <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="myprofile.html"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
-                <li><a href="./"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
+                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
+                <li><a href="menjual.html"><span class="glyphicon glyphicon-map-marker"></span> Jual buku</a></li>
+                <li><a href="penjualanku.html"><span class="glyphicon glyphicon-th-list"></span> Daftar penjualan</a></li>
+                <li><a href="pembelianku.html"><span class="glyphicon glyphicon-credit-card"></span> History pembelian</a></li>
                 <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
               </ul>
             </li>
@@ -164,37 +179,14 @@
                 </div><!-- /.modal-content -->
               </div><!-- /.modal-dialog -->
             </div><!-- /.modal -->
-            
-            <div class="modal fade" id="Message">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title">Form Message</h4>
-                  </div>
-                  <div class="modal-body">
-                    <p>Isi Pesan Anda Disini . . .&hellip;</p>
-                  </div>
-                  <div class="thumbnail">
-                      <form class="caption">
-                        <textarea class="form-control" id="message-text"></textarea>
-                      </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Batalkan</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Kirim Pesan</button>
-                  </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
-      
-      <h4>Profil User</h4>
+
+      <h3 class="judul"><small><span class="glyphicon glyphicon-user"></span> Profil User</small></h3>
       <div class="r1 container">
         <div class="col-xs-8 overview">
           <div class="col-xs-4 avatar">
             <img src="img/ava.png" alt="..." class="img-rounded">
             <span>
-              <h5>Arrya Dwisatya Widigda</h5>
+              <h5>Edmund Ophie</h5>
             </span>
           </div>
           <div class="col-xs-8 overview-right">
@@ -236,7 +228,7 @@
             </div>
             <div class="col-xs-3">
               <img src="img/fisika.png" alt="" class="img-thumbnail">
-              <h5 class="judulbuku"><a href="#"><strong>Physic</strong></a></h5>
+              <h5 class="judulbuku"><a href="bookfisika.html"><strong>Physic</strong></a></h5>
               <p>Rp 68,000</p>
             </div>
             <div class="col-xs-3">
@@ -255,24 +247,28 @@
           <h4><span class="glyphicon glyphicon-info-sign"></span> Informasi User</h4>
           <ul class="list-unstyled">
             <span class="userinfo-wrap">
-              <li>Nama <span>: Arrya Dwisatya Widigda</span></li>
-              <li>NIM <span>: 13512xxx</span></li>
+              <li>Nama <span>: Edmund Ophie</span></li>
+              <li>NIM <span>: 13512041</span></li>
               <li>Jurusan <span>: Informatika</span></li>
-              <li>Alamat <span>: Jl xxxxx</span></li>
+              <li>Alamat <span>: Jl Buntu No 15</span></li>
               <li>&nbsp;<span>&nbsp;&nbsp;Bandung</span></li>
-              <li>HP <span>: 08xxxxxxx</span></li>
-              <li>Email <span>: aryya@gmail.com</span></li>
+              <li>HP <span>: 08123456789</span></li>
+              <li>Email <span>: edmund@ophie.com</span></li>
             </span>
           </ul>
-          <div class="chat">
-            <span class="glyphicon glyphicon-comment"></span> <a href="#" data-toggle="modal" data-target="#chat"><small>Chat with user</small></a> or <a href="#" data-toggle="modal" data-target="#Message"><small>send a message</small></a>
-          </div>
-          <div class="huhu"><button class="btn btn-primary" data-toggle="modal" data-target="#Report">Report</button></div>
+          	<div class="text-left col-xs-6 chat">
+            <span class="glyphicon glyphicon-comment"></span><a href="#" data-toggle="modal" data-target="#chat"><small> Chat with user</small></a>
+            </div>
+            <div class="text-right col-xs-6 report">
+            	<span class="label label-primary" data-toggle="modal" data-target="#Report">Report this user</span>
+            </div>
+          
+          
         </div>
       </div>
     </div>
     
-    <div class="clear"></div>
+    <div class="clearfix"></div>
     <div class="footer">
       <div class="container">
         <div class="col-xs-3 contact-wrap">
@@ -316,7 +312,10 @@
     <div class="container copyright">
       <p>© 2014 Copyright E-BukuBekas. All Rights Reserved.</p>
     </div>
+    
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/search.js"></script>
   </body>
 </html>

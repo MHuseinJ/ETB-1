@@ -7,11 +7,11 @@
     <link rel="icon" href="favicon.ico">
 
     <title>E-BukuBekas</title>
-<link href= "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet">
+
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/profil.css" rel="stylesheet">
-    <link href="css/popup.css" rel="stylesheet">
+    <link href="css/penjualanku.css" rel="stylesheet">
 
   </head>
 
@@ -26,25 +26,48 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">E-BukuBekas</a>
+          <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-book"></span> E-BukuBekas</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse category<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Majalah</a></li>
+                <li><a href="#">Nonfiksi</a></li>
+                <li><a href="#">Musik</a></li>
+                <li><a href="katalog-sains.html">Sains</a></li>
+                <li><a href="#">Olahraga</a></li>
+                <li><a href="#">Seni</a></li>
+                <li><a href="#">Teknik</a></li>
+                <li><a href="#">Novel</a></li>
+                <li><a href="#">Jurnal</a></li>
+                <li><a href="#">Bisnis</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Lainnya</a></li>
+                <li class="divider"></li>
+                <li><a href="katalog.html"><span class="glyphicon glyphicon-th"></span> Show All Category</a></li>
+              </ul>
+            </li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <div class="search-wrap">
-                <input type="text" class="form-control" placeholder="Search">
-                <a href="search.html"> <span class="glyphicon glyphicon-search"></span></a>
+              <div class="search-wrap ui-widget">
+        <input id="tags" class="form-control">
+                <span class="glyphicon glyphicon-search" onClick="hasilCari();"></span>
               </div>
             </li>
-            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+            <li><a href="shoppingcart.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
             <li><a href="#" class="red"><span class="glyphicon glyphicon-envelope"></span> <strong>2</strong></a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Edmund <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Welcome, Edmund <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="./"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
-                <li><a href="./"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
-                <li><a href="./"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
+                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
+                <li><a href="menjual.html"><span class="glyphicon glyphicon-map-marker"></span> Jual buku</a></li>
+                <li><a href="penjualanku.html"><span class="glyphicon glyphicon-th-list"></span> Daftar penjualan</a></li>
+                <li><a href="pembelianku.html"><span class="glyphicon glyphicon-credit-card"></span> History pembelian</a></li>
+                <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
               </ul>
             </li>
           </ul>
@@ -52,11 +75,12 @@
       </div>
     </nav>
     
+    
     <!-- Main content goes here! -->
     <div class="container main">
-      <h1>History Pembelian</h1>
+      <h3 class="judul"><small><span class="glyphicon glyphicon-th-list"></span> History Penjualan</h1></small>
       <div>
-		<hr>
+      
 	  </div>
 	  <div>
 			<table class="table">
@@ -69,36 +93,73 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="active">
-						<td>1</td>
-						<td>The Lean Startup - Eric Ries</td>
-						<td>Masih ada</td>
-						<td><a href="#">hapus</a></td>
-					</tr>
-					<tr class="success">
-						<td>2</td>
-						<td>7 Hari Menjadi Jawara di Internet</td>
-						<td>Masih ada</td>
-						<td><a href="#">hapus</a></td>
-					</tr>
-					<tr class="info">
-						<td>3</td>
-						<td>Carding for Beginner</td>
-						<td>Proses Pembelian</td>
-						<td><a href="#">hapus</a></td>
-					</tr>
-					<tr class="warning">
-						<td>4</td>
-						<td>Human and Computer Interaction Design</td>
-						<td>Masih ada</td>
-						<td><a href="#">hapus</a></td>
-					</tr>
-					<tr class="danger">
-						<td>5</td>
-						<td>Fundamentals of Electric Circuits</td>
-						<td>Masih ada</td>
-						<td><a href="#">hapus</a></td>
-					</tr>
+					  <tr class="danger text-danger">
+            <td>4123</td>
+            <td>Teori Bisnis</td>
+            <td>Terdaftar</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
+          <tr class="danger text-danger">
+            <td>4152</td>
+            <td>Menjadi Pembalap di Internet</td>
+            <td>Terdaftar</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
+
+          <tr class="danger text-danger">
+            <td>2351</td>
+            <td>Bidadari Langit 7</td>
+            <td>Terdaftar</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
+
+          <tr class="success text-success">
+            <td>3512</td>
+            <td>Internet Cepat</td>
+            <td>Terjual</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
+
+          <tr class="success text-success">
+            <td>6796</td>
+            <td>Sakitnya Tuh Disini</td>
+            <td>Terjual</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
+
+          <tr class="success text-success">
+            <td>6132</td>
+            <td>7 Hari Menjadi Jawara di Internet</td>
+            <td>Terjual</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
+          <tr class="success text-success">
+            <td>1523</td>
+            <td>Carding for Beginner</td>
+            <td>Terjual</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
+          <tr class="success text-success">
+            <td>9104</td>
+            <td>Human and Computer Interaction Design</td>
+            <td>Terjual</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
+          <tr class="success text-success">
+            <td>1492</td>
+            <td>Fundamentals of Electric Circuits</td>
+            <td>Terjual</td>
+            
+            <td><span class="glyphicon glyphicon-remove-sign"></span> <a href="#">Hapus</a></td>
+          </tr>
 				</tbody>
 			</table>
 	  </div>
@@ -149,38 +210,9 @@
       <p>© 2014 Copyright E-BukuBekas. All Rights Reserved.</p>
     </div>
 
-	<div class="overlay" id="overlay">
-		<div class="resizable" >
-			<a class="boxclose" id="boxclose"></a>
-			<iframe width="420" height="315" src="http://www.youtube.com/embed/U7wEctHyuc0?rel=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</div>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script>
-	$(function() {
-		$( ".resizable" ).resizable({
-		animate: true, animateEasing: 'swing', animateDuration: 500
-		});
-	});
-	</script>
-
-	<script>
-	$(document).ready(function(){
-	  function showPop(){
-		function(){
-			$("#overlay, .resizable, iframe").fadeIn(1000);
-			$(".resizable iframe").css('display', 'block');
-		}
-	  };
-	 
-		$("#boxclose").click(function(){
-				$("#overlay, .resizable, iframe").fadeOut(1000);
-				$( 'iframe' ).attr( 'src', function ( i, val ) { return val; });
-				$( "iframe" ).hide();
-			});
-	});
-	</script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>
