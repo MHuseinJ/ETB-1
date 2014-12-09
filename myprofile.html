@@ -7,7 +7,7 @@
     <link rel="icon" href="favicon.ico">
 
     <title>E-BukuBekas</title>
-
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/profil.css" rel="stylesheet">
@@ -26,12 +26,12 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <div class="search-wrap">
+              <div class="search-wrap ui-widget">
                 <input type="text" class="form-control" placeholder="Search">
-                <a href="search.html"> <span class="glyphicon glyphicon-search"></span></a>
+                <span class="glyphicon glyphicon-search" onclick="gotosearch()"></span>
               </div>
             </li>
-            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+            <li><a href="shoppingcart.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
             <li class="dropdown"> 
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -42,12 +42,19 @@
               </ul>
 			</li>
 	
-            <li><a href="#" class="red"><span class="glyphicon glyphicon-envelope"></span> <strong>2</strong></a></li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope"></span> <strong>2</strong></a>
+                    <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Chat belum terbaca</li>
+                <li class="divider"></li>
+                <li><a href="#" data-toggle="modal" data-target="#chat">Aryya  : lorem ipsum lalalla</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#chat">Husain : Bukan lorem ipsum la</a></li>
+              </ul>
+            </li>
              <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Edmund <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="myprofile.html"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
-                <li><a href="menjual.html"><span class="glyphicon glyphicon-edit"></span> Form PEnjualan</a></li>
+                <li><a href="menjual.html"><span class="glyphicon glyphicon-edit"></span> Form Penjualan</a></li>
                 <li><a href="./"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
                 <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
               </ul>
@@ -59,6 +66,86 @@
     
     <!-- Main content goes here! -->
     <div class="container main">
+    
+        <div class="modal fade" id="chat">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Chat Form</h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="chat">
+                        <div class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text=U" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Arrya Dwisatya W</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right clearfix"><span class="chat-img pull-right">
+                            <img src="http://placehold.it/50/FA6F57/fff&amp;text=ME" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text=U" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Arrya Dwisatya W</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right clearfix"><span class="chat-img pull-right">
+                            <img src="http://placehold.it/50/FA6F57/fff&amp;text=ME" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                    </div>
+                  </div>
+               </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->    
        
       <h4>Profilku</h4>
       <div class="r1 container">
@@ -188,5 +275,8 @@
     </div>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/search.js"></script>
   </body>
 </html>
