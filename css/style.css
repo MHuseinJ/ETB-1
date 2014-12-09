@@ -9,6 +9,9 @@ body {
 .index {
   background: url("../img/background.jpg");
 }
+.cari{
+    background: url("../img/books.jpg");
+}
 
 .bgimage img{
 	height:100%;
