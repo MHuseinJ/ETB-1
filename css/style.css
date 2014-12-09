@@ -9,6 +9,11 @@ body {
 .index {
   background: url("../img/background.jpg");
 }
+
+.admin {
+  background: url("../img/books.jpg");
+}
+
 .cari{
     background: url("../img/books.jpg");
 }
