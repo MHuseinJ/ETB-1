@@ -5,11 +5,35 @@ body {
 .navbar-brand span {
 	color:black;
 }
+#admin{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+.but{
+     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .index {
   background: url("../img/background.jpg");
 }
 
+.banned{
+    float: right;
+}
+.deletebtn{
+    height: inherit;
+position: absolute;
+top: 50%;
+right: 0;
+transform: translateY(-50%);
+}
+
+.delbt{
+    position: relative;
+}
 .admin {
   background: url("../img/books.jpg");
 }
