@@ -1,0 +1,16 @@
+.judul {
+	border-bottom:1px dashed black;
+}
+
+.total {
+	display: inline;
+}
+
+.btn-makepayment{
+	position: relative;
+}
+
+.btn-payment{
+	position: absolute;
+	right: 0;
+}

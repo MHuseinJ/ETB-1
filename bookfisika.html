@@ -11,11 +11,11 @@
 		<link href="css/jquery-ui.css" rel="stylesheet">
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<link href="css/purchasepage.css" rel="stylesheet">
+		<link href="css/bookfisika.css" rel="stylesheet">
 	</head>
 
 	<body>
-	<!-- Fixed navbar -->
+    <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">E-BukuBekas</a>
+          <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-book"></span> E-BukuBekas</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -52,7 +52,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <div class="search-wrap ui-widget">
-				<input id="tags" class="form-control">
+        <input id="tags" class="form-control">
                 <span class="glyphicon glyphicon-search" onClick="hasilCari();"></span>
               </div>
             </li>
@@ -71,88 +71,113 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-
+		
 		<!-- Main content goes here! -->
 		<div class="container main">
-			<h3 class="judul"><small><span class="glyphicon glyphicon-barcode"></span> Opsi Pembayaran</small></h3>
-			
-			<div class="panel panel-info">
-			  <div class="panel-heading">
-			    <h3 class="panel-title">Metode Pembayaran</h3>
-			  </div>
-			  <div class="panel-body">
-			    <div class="radio">
-				  <label>
-				    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1" checked>
-				    Transfer ATM
-				  </label>
+			<div class="clearfix"></div>
+	          <div class="col-xs-4">
+	            <a class="thumbnail">
+	              <img src="img/fisika.png" alt="...">
+	            </a>
+	          </div>
+	          <div class="col-xs-8">
+	            <h3 id="judul"><b>Principles of Physics</b></h3>
+	            <br />
+				<p>Pengarang : Purcell</p>
+				<p>Penerbit : Pearson International Edition</p>
+				<p>Tahun Terbit : 2008</p>
+				<p>Mata Kuliah : FI1101 Fisika 1A</p>
+				<p>Jumlah Halaman : 900 halaman</p>
+				<p>Seller : <a href="#">Aryya Dwisatya</a></p>
+				<br />
+				<p><a href="#" data-toggle="modal" data-target="#Report"><span class="glyphicon glyphicon-warning-sign"></span> Report this item</a></p>
+				<div class="harga">
+		            <h3 class="text-success">Rp 93,000</h3>
+	                <a href="shoppingcart.html"><h4 class="text-primary"><span class="glyphicon glyphicon-shopping-cart"></span><b> Add to cart</b></h4></a>
+	            </div>
+	          </div>
+	          <div class="clearfix"></div>
+	          <div class="panel panel-primary">
+		          <div class="panel-heading">
+				    <h3 class="panel-title"><strong>Deskripsi</strong></h3>
+				  </div>
+			      <div class="panel-body">
+			      	<p class="lead">
+			      		Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum.
+			      	</p>     
+			      	<p class="lead">
+			      		Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+Vestibulum id ligula porta felis euismod semper. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+			      	</p>	
+			      	<p class="lead">
+			      		Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Donec sed odio dui. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.
+			      	</p> 
+			      </div>
+      		  </div><!-- End of Panel -->
+      		  <div class="clearfix"></div>
+      		 <h3 id="related">Related Books</h3> 
+			<div class="r2 container">
+				<div class="booklist text-center">
+					<div class="col-xs-2">
+						<img src="img/calculus.png" alt="" class="img-thumbnail">
+						<h5 class="judulbuku"><a href="bookcalculus.html"><strong>Calculus</strong></a></h5>
+						<p>Rp 58,000</p>
+					</div>
+					<div class="col-xs-2">
+						<img src="img/fisika.png" alt="" class="img-thumbnail">
+						<h5 class="judulbuku"><a href="bookfisika.html"><strong>Physics</strong></a></h5>
+						<p>Rp 68,000</p>
+					</div>
+					<div class="col-xs-2">
+						<img src="img/dre.png" alt="" class="img-thumbnail">
+						<h5 class="judulbuku"><strong><a href="#">DRE</a></strong></h5>
+						<p>Rp 92,000</p>
+					</div>
+					<div class="col-xs-2">
+						<img src="img/fisika.png" alt="" class="img-thumbnail">
+						<h5 class="judulbuku"><a href="#"><strong>Physics</strong></a></h5>
+						<p>Rp 89,000</p>
+					</div>
+					<div class="col-xs-2">
+						<img src="img/calculus.png" alt="" class="img-thumbnail">
+						<h5 class="judulbuku"><a href="bookcalculus.html"><strong>Calculus</strong></a></h5>
+						<p>Rp 102,000</p>
+					</div>
+					<div class="col-xs-2">
+						<img src="img/dre.png" alt="" class="img-thumbnail">
+						<h5 class="judulbuku"><a href="#"><strong>DRE</strong></a></h5>
+						<p>Rp 125,000</p>
+					</div>
 				</div>
-				<div class="radio">
-				  <label>
-				    <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
-				    Cash On Delivery
-				  </label>
-				</div>
-				<div class="radio">
-				  <label>
-				    <input type="radio" name="optionsRadios2" id="optionsRadios3" value="option3">
-				    Internet Banking
-				  </label>
-				</div>
-			  </div>
-			</div>
-			<div class="panel panel-info">
-			  <div class="panel-heading">
-			    <h3 class="panel-title">Tujuan Transfer</h3>
-			  </div>
-			  <div class="panel-body">
-			    <div class="radio">
-				  <label>
-				    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-				    BCA - Muhammad Husain (900-123-421-1234)
-				  </label>
-				</div>
-				<div class="radio">
-				  <label>
-				    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				    Mandiri - Muhammad Husain (514-212-421-1234)
-				  </label>
-				</div>
-				<div class="radio">
-				  <label>
-				    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-				    BNI - Muhammad Husain (728-517-421-1234)
-				  </label>
-				</div>
-			  </div>
-			 </div>
-			<hr />
-			<div class="btn-makepayment">
-			<h3 class="text-left total">Total : <strong><span class="text-primary">Rp 154,999</span></strong></h3>
-			<a href="#" class="btn btn-success btn-payment text-right"  data-toggle="modal" data-target="#Payment"><span class="glyphicon glyphicon-check"></span> Lakukan pembayaran</a>
 			</div>
 		</div>
 		
-		<div class="modal fade" id="Payment">
+		<!-- /.ini allertnya -->
+         <div class="modal fade" id="Report">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title"><span class="glyphicon glyphicon-ok"></span><strong> Pembayaran Berhasil</strong></h4>
+                <h4 class="modal-title">Form Laporan</h4>
               </div>
-              <div class="modal-body text-success">
-              	<strong>Terima kasih.</strong> Pembayaran anda sudah kami terima. <br/>
-              	Pesanan anda akan segera diproses.
+              <div class="modal-body">
+                <p>Jika Anda Yakin ingin melaporkan post ini, isi alasan anda dibawah ini&hellip;</p>
+              </div>
+              <div class="thumbnail">
+                  <form class="caption">
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </form>
               </div>
               <div class="modal-footer">
-                <a href="katalog.html" type="button" class="btn btn-success" >OK</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Batalkan</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Kirim</button>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-		<div class="clear"></div>
+		<div class="clearfix"></div>
 		<div class="footer">
 			<div class="container">
 				<div class="col-xs-3 contact-wrap">
@@ -196,6 +221,7 @@
 		<div class="container copyright">
 			<p>© 2014 Copyright E-BukuBekas. All Rights Reserved.</p>
 		</div>
+    
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui.js"></script>

@@ -1,0 +1,29 @@
+.judul {
+	border-bottom: 1px dashed black;
+}
+
+.list {
+	margin-bottom:0;
+}
+
+.panel-body {
+	box-shadow: 2px 2px 3px black;
+}
+
+.total {
+	margin-right: 30px;
+}
+
+.btn-continue {
+	position: absolute;
+	left:0;
+}
+
+.btn-payment {
+	position: absolute;
+	right: 0;
+}
+
+.payment {
+	position: relative;
+}
