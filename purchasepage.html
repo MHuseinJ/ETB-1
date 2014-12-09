@@ -8,13 +8,14 @@
 
 		<title>E-BukuBekas</title>
 
+		<link href="css/jquery-ui.css" rel="stylesheet">
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<link href="css/profil.css" rel="stylesheet">
+		<link href="css/purchasepage.css" rel="stylesheet">
 	</head>
 
 	<body>
-		<!-- Fixed navbar -->
+	<!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -24,34 +25,46 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="katalog.html">E-BukuBekas</a>
+          <a class="navbar-brand" href="index.html">E-BukuBekas</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse category<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Majalah</a></li>
+                <li><a href="#">Nonfiksi</a></li>
+                <li><a href="#">Musik</a></li>
+                <li><a href="katalog-sains.html">Sains</a></li>
+                <li><a href="#">Olahraga</a></li>
+                <li><a href="#">Seni</a></li>
+                <li><a href="#">Teknik</a></li>
+                <li><a href="#">Novel</a></li>
+                <li><a href="#">Jurnal</a></li>
+                <li><a href="#">Bisnis</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Lainnya</a></li>
+                <li class="divider"></li>
+                <li><a href="katalog.html"><span class="glyphicon glyphicon-th"></span> Show All Category</a></li>
+              </ul>
+            </li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <div class="search-wrap">
-                <input type="text" class="form-control" placeholder="Search">
-                <a href="search.html"> <span class="glyphicon glyphicon-search"></span></a>
+              <div class="search-wrap ui-widget">
+				<input id="tags" class="form-control">
+                <span class="glyphicon glyphicon-search" onClick="hasilCari();"></span>
               </div>
             </li>
             <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-            <li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li class="dropdown-header">Notifikasi</li>
-                <li class="divider"></li>
-                <li><a href="notifikasi.html">Christ mengirim pesan kepada kamu</a></li>
-                <li><a href="notifikasi.html">Husain mengirim pesan kepada kamu</a></li>
-              </ul>
-			</li>
-	
+            <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
             <li><a href="#" class="red"><span class="glyphicon glyphicon-envelope"></span> <strong>2</strong></a></li>
-             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Edmund <span class="caret"></span></a>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Welcome, Edmund <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
+                <li><a href="./"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
                 <li><a href="./"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
-                <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
+                <li><a href="./"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
               </ul>
             </li>
           </ul>
@@ -62,41 +75,82 @@
 
 		<!-- Main content goes here! -->
 		<div class="container main">
-			<h4>Purchase Page</h4>
-			<div class="r1 container">
-				<h5>Metode Pembayaran:</h5>
-				<!-- Search box Start -->
-				<form>
-					<div class="well carousel-search hidden-sm">
-						<div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Pilih metode transaksi <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Cash on Delivery</a></li>
-								<li><a href="#">Transfer BCA to BCA</a></li>
-								<li><a href="#">Other</a></li>
-							</ul>
-						</div>
-					</div>
-				</form>
-				<h5>Tujuan Transfer:</h5>
-				<form>
-					<div class="well carousel-search hidden-sm">
-						<div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select2" data-toggle="dropdown" href="#">Pilih alamat transfer:<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Aryya Dwisatya Widhigda (xxx-xxxx-xxx)</a></li>
-								<li><a href="#">Muhammad Husain Jakfari (xxx-xxxx-xxx)</a></li>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</form>
-				<!-- Search box End -->
-				<h5>Total Pembelian: <strong>Rp128,000</strong></h5>
-				<br>
-				<center><a class="btn btn-large btn-primary" href="katalog.html">Bayar</a></center>
+			<h3 class="judul"><small><span class="glyphicon glyphicon-barcode"></span> Opsi Pembayaran</small></h3>
+			
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Metode Pembayaran</h3>
+			  </div>
+			  <div class="panel-body">
+			    <div class="radio">
+				  <label>
+				    <input type="radio" name="optionsRadios2" id="optionsRadios1" value="option1" checked>
+				    Transfer ATM
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+				    Cash On Delivery
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="optionsRadios2" id="optionsRadios3" value="option3">
+				    Internet Banking
+				  </label>
+				</div>
+			  </div>
+			</div>
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Tujuan Transfer</h3>
+			  </div>
+			  <div class="panel-body">
+			    <div class="radio">
+				  <label>
+				    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				    BCA - Muhammad Husain (900-123-421-1234)
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				    Mandiri - Muhammad Husain (514-212-421-1234)
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+				    BNI - Muhammad Husain (728-517-421-1234)
+				  </label>
+				</div>
+			  </div>
+			 </div>
+			<hr />
+			<div class="btn-makepayment">
+			<h3 class="text-left total">Total : <strong><span class="text-primary">Rp 154,999</span></strong></h3>
+			<a href="#" class="btn btn-success btn-payment text-right"  data-toggle="modal" data-target="#Payment"><span class="glyphicon glyphicon-check"></span> Lakukan pembayaran</a>
 			</div>
 		</div>
 		
-
+		<div class="modal fade" id="Payment">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title"><span class="glyphicon glyphicon-ok"></span><strong> Pembayaran Berhasil</strong></h4>
+              </div>
+              <div class="modal-body text-success">
+              	<strong>Terima kasih.</strong> Pembayaran anda sudah kami terima. <br/>
+              	Pesanan anda akan segera diproses.
+              </div>
+              <div class="modal-footer">
+                <a href="katalog.html" type="button" class="btn btn-success" >OK</a>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
 		<div class="clear"></div>
 		<div class="footer">
@@ -142,7 +196,9 @@
 		<div class="container copyright">
 			<p>© 2014 Copyright E-BukuBekas. All Rights Reserved.</p>
 		</div>
-		<script src="js/jquery-2.1.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/search.js"></script>
 	</body>
 </html>

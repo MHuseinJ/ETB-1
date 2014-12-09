@@ -8,13 +8,14 @@
 
 		<title>E-BukuBekas</title>
 
+		<link href="css/jquery-ui.css" rel="stylesheet">
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<link href="css/profil.css" rel="stylesheet">
+		<link href="css/shoppingcart.css" rel="stylesheet">
 	</head>
 
 	<body>
-		<!-- Fixed navbar -->
+	<!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -24,34 +25,46 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="katalog.html">E-BukuBekas</a>
+          <a class="navbar-brand" href="index.html">E-BukuBekas</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse category<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Majalah</a></li>
+                <li><a href="#">Nonfiksi</a></li>
+                <li><a href="#">Musik</a></li>
+                <li><a href="katalog-sains.html">Sains</a></li>
+                <li><a href="#">Olahraga</a></li>
+                <li><a href="#">Seni</a></li>
+                <li><a href="#">Teknik</a></li>
+                <li><a href="#">Novel</a></li>
+                <li><a href="#">Jurnal</a></li>
+                <li><a href="#">Bisnis</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Lainnya</a></li>
+                <li class="divider"></li>
+                <li><a href="katalog.html"><span class="glyphicon glyphicon-th"></span> Show All Category</a></li>
+              </ul>
+            </li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <div class="search-wrap">
-                <input type="text" class="form-control" placeholder="Search">
-                <a href="search.html"> <span class="glyphicon glyphicon-search"></span></a>
+              <div class="search-wrap ui-widget">
+				<input id="tags" class="form-control">
+                <span class="glyphicon glyphicon-search" onClick="hasilCari();"></span>
               </div>
             </li>
             <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-            <li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li class="dropdown-header">Notifikasi</li>
-                <li class="divider"></li>
-                <li><a href="notifikasi.html">Christ mengirim pesan kepada kamu</a></li>
-                <li><a href="notifikasi.html">Husain mengirim pesan kepada kamu</a></li>
-              </ul>
-			</li>
-	
+            <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
             <li><a href="#" class="red"><span class="glyphicon glyphicon-envelope"></span> <strong>2</strong></a></li>
-             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Edmund <span class="caret"></span></a>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Welcome, Edmund <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
+                <li><a href="./"><span class="glyphicon glyphicon-user"></span> My profile</a></li>
                 <li><a href="./"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
-                <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
+                <li><a href="./"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>  
               </ul>
             </li>
           </ul>
@@ -59,70 +72,54 @@
       </div>
     </nav>
 
-
 		<!-- Main content goes here! -->
 		<div class="container main">
-			<h4>Shopping Cart</h4>
-			<div class="r1 container">
-				<div class="col-xs-10"></div>
-				<div class="col-xs-2">
-					<h5>Total Price <span>: <strong>Rp 126,000</strong></span></h5>
-				</div>
-			</div>
-			<div class="r1 container">
-				<div class="col-xs-4">
-					<div class="booklist">
-						<div class="col-xs-12">
-							<img src="img/calculus.png" alt="" class="img-thumbnail">
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-8 statistic">
-					<ul class="list-unstyled">
-						<span class="userinfo-wrap">
-							<li>Judul <span>: Calculus Ninth Edition</span></li>
-							<li>Pengarang <span>: Purcell</span></li>
-							<li>Penerbit <span>: Pearson International Edition</span></li>
-							<li>Tahun Terbit <span>: 2008</span></li>
-							<li>Mata Kuliah <span>: MA1101 Kalkulus 1A</span></li>
-							<li>Jmlh Halaman <span>: 900 halaman</span></li>
-							<li>Seller <span>: <a href="#">Aryya Dwisatya</a></span></li>
-							<li>Harga <span>: Rp 58,000</span></li>
-						</span>
-					</ul>
-				</div>
-			</div>
-			<hr>
-			<div class="r1 container">
-				<div class="col-xs-4">
-					<div class="booklist">
-						<div class="col-xs-12">
-							<img src="img/fisika.png" alt="" class="img-thumbnail">
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-8 statistic">
-					<ul class="list-unstyled">
-						<span class="userinfo-wrap">
-							<li>Judul <span>: Physics Ninth Edition</span></li>
-							<li>Pengarang <span>: Halliday</span></li>
-							<li>Penerbit <span>: Pearson International Edition</span></li>
-							<li>Tahun Terbit <span>: 2008</span></li>
-							<li>Mata Kuliah <span>: FI1101 Fisika 1A</span></li>
-							<li>Jmlh Halaman <span>: 1125 halaman</span></li>
-							<li>Seller <span>: <a href="#">Muhammad Husain Jakfari</a></span></li>
-							<li>Harga <span>: Rp 68,000</span></li>
-						</span>
-					</ul>
-				</div>
-			</div>
-			<br>
-			<center><a class="btn btn-large btn-primary" href="purchasepage.html">Next</a></center>
+			<h3 class="judul"><small><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</small></h3>
+      		<div class="panel panel-default book1">
+			<div class="panel-body">
+	          <div class="col-xs-3">
+	            <a href="#" class="thumbnail list">
+	              <img src="img/fisika.png" alt="...">
+	            </a>
+	          </div>
+	          <div class="col-xs-9">
+	            <a href="bookfisika.html"><h3><b>Principles of Physics</b></h3></a>
+	              <p class="lead"><small>Seller : <a href="#">Edmund Ophie</a></small></p>
+	                 
+	              <p class="lead"><small>Pengarang : Halliday</small></p>
+	              <p class="lead"><small>Penerbit : John-Willey International Edition</small></p>
+				  <h4 class="text-right"><small>Subtotal: </small><span class="text-success">Rp 93,000</span></h4>
+	           </div>
+        	</div>
+      		</div><!-- End of Panel -->
+      		<div class="panel panel-default book2">
+			<div class="panel-body">
+	          <div class="col-xs-3">
+	            <a href="#" class="thumbnail list">
+	              <img src="img/dre.png" alt="...">
+	            </a>
+	          </div>
+	          <div class="col-xs-9">
+	            <a href="bookfisika.html"><h3><b>Fundamental of Electric Circuits</b></h3></a>
+	              <p class="lead"><small>Seller : <a href="#">Chris Angga Saputra</a></small></p>
+	                 
+	              <p class="lead"><small>Pengarang : Sadiku</small></p>
+	              <p class="lead"><small>Penerbit : Wesley International</small></p>
+				  <h4 class="text-right"><small>Subtotal: </small><span class="text-success">Rp 82,999</span></h4>
+	           </div>
+        	</div>
+      		</div><!-- End of Panel -->
+	      	
+	      		<h3 class="text-right total"><small>Total : </small><strong><span class="text-primary">Rp 154,999</span></strong></h3>
+      		<hr />
+      		<div class="payment">
+      			<a href="katalog.html" class="btn btn-primary btn-continue"><span class="glyphicon glyphicon-circle-arrow-left"></span> Teruskan belanja</a>
+      			<a href="purchasepage.html" class="btn btn-success btn-payment">Lanjutkan ke pembayaran <span class="glyphicon glyphicon-share-alt"></span></a>
+      		</div>
 		</div>
-		
 
-
-		<div class="clear"></div>
+		<div class="clearfix"></div>
+		<br/><br/>
 		<div class="footer">
 			<div class="container">
 				<div class="col-xs-3 contact-wrap">
@@ -166,7 +163,10 @@
 		<div class="container copyright">
 			<p>© 2014 Copyright E-BukuBekas. All Rights Reserved.</p>
 		</div>
-		<script src="js/jquery-2.1.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/search.js"></script>
 	</body>
 </html>
